@@ -1,4 +1,4 @@
-print "Hello, world\n";
+# print "Hello, world\n";
 
 #!/usr/bin/env perl
 
