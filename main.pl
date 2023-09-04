@@ -29,7 +29,8 @@ my $iphone = Product->new({
 my $nexus = Product->new({ 
 serial =>"101",
 name => "Nexus2",
-price => 299.00});
+price => 299.00,
+color => "blue"});
 
 print $iphone->to_string();
 print $nexus->to_string();
@@ -39,3 +40,6 @@ print $nexus->get_name . "\n";
 
 $nexus->set_name("Nexiferous");
 print $nexus->get_name. "\n";
+
+print "\n";
+print $nexus->get_color . "\n";
