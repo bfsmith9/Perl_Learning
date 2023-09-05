@@ -12,7 +12,7 @@ sub new{
     my $self = bless { serial => $args->{serial},
                        name => $args->{name},
                        price => $args->{price},
-                       color => $args->{color}
+					   color  => $args->{color} || 'black',
                      }, $class;
 }
 # get name of the product
