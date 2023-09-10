@@ -17,6 +17,8 @@ BEGIN {unshift @INC, "Product/lib"}
 # use File::Basename qw( dirname );
 # use lib dirname(abs_path($0));
 
+# Added new price-adding subroutine to main - 9/10/2023
+
 use strict;
 use warnings;
 use Product;
