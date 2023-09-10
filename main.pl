@@ -20,6 +20,7 @@ BEGIN {unshift @INC, "Product/lib"}
 use strict;
 use warnings;
 use Product;
+my $total_price;
 
 my $iphone = Product->new({
           serial =>"100",
@@ -43,3 +44,22 @@ print $nexus->get_name. "\n";
 
 print "\n";
 print $nexus->get_color . "\n";
+
+# price_adder($nexus, $iphone);
+$total_price = price_adder($nexus, $iphone);
+print("Here is the total price in a function: \$$total_price\.00\n");
+
+# Subroutines ---
+
+# Subroutine to print the total price of some phones --- 
+# Takes phone objects as arguments 
+sub price_adder {
+    my $subtotal = 0;
+
+    foreach (@_) {
+        $subtotal = $subtotal + $_->{price};
+    }   
+    return $subtotal;
+
+}
+# End price_adder subroutine --- 
