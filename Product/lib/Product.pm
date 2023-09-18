@@ -16,7 +16,10 @@ sub new{
                      }, $class;
 }
 # get name of the product
-# Don't know why you can just shift $self here. Must be default.
+# Notice how you always have the class or object as the first argument 
+# when a method is invoked (see Camel Book, p. 311). That's how OOP works
+# in Perl - there's always an extra initial arg that's either the name 
+# of the class or the reference to the object when you use a method.
 sub get_name{
    my $self = shift;
    return $self->{name};
