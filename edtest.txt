@@ -1,0 +1,10 @@
+#! /bin/bash
+# Testing the ed/ex editor
+########################################
+# why, howdy. This is a comment
+echo "goodbye";
+########################################
+echo "here is a test from the pi";
+echo "Adding some more here from GitHub.";
+echo "Adding more text from pi, post-two-factor.";
+echo "Adding some text from docker image, ubuntu-dev-env.";
