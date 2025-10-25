@@ -6,7 +6,7 @@ use Data::Dumper qw(Dumper);
 
 my %cast;
 
-$cast{soldier} = "Roy";
+$cast{'soldier'} = "Roy";
 $cast{cop} = "Deckard";
 $cast{gymnast} = "Pris";
 
@@ -34,7 +34,13 @@ my %city = (
     security => ["blade runner", "sargeant", "police interviewer"],
     );
 
-print "A member of the city: ${city{sales}[r01]}\n";
+# I don't know what this "r01" array index is
+# Works the same as a "0". Probably something I found 
+# on the net. 
+
+# OK - Google AI told me the answer. The "r01" or "meh" or whatever 
+# you like is simply converted into the number zero. 
+print "A member of the city: ${city{sales}[meh]}\n";
 print "Try again: ${city{sales}[0]}\n";
 print "Another member of the city: ${city{security}[2]}\n";
 
