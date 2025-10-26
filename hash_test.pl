@@ -29,9 +29,11 @@ for my $peep (@peeps) {
 }
 
 my %city = (
-    sales => ["noodle cook", "eyeball salesman", "taxi driver"],
+    'sales' => ["noodle cook", "eyeball salesman", "taxi driver"],
     entertainment => ["dancer", "piano player", "robot comedian"],
     security => ["blade runner", "sargeant", "police interviewer"],
+    'robots' => {'roy' => 'leader', 
+    						 'pris' => 'gymnast' },
     );
 
 # I don't know what this "r01" array index is
@@ -40,11 +42,18 @@ my %city = (
 
 # OK - Google AI told me the answer. The "r01" or "meh" or whatever 
 # you like is simply converted into the number zero. 
+
+# Placement of brackets is very confusing; that's why I'm having issues.
 print "A member of the city: ${city{sales}[meh]}\n";
+print "A member of the city2: ${city{sales}[0]}\n";
+print "A member of the city3: $city{sales}[0]\n";
+print "A member of the city4: %city{sales}[0]\n";
+print "A member of the city5: ${city}{sales}[0]\n";
 print "Try again: ${city{sales}[0]}\n";
 print "Another member of the city: ${city{security}[2]}\n";
+print "A leader: $city{'robots'}{'roy'}\n";
 
 print "Here's the Data Dumper output\n";
-print Dumper \%cast;
-print Dumper \%city;
+# print Dumper \%cast;
+# print Dumper \%city;
 
